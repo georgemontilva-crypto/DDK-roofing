@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  html.lenis, html.lenis body { height: auto; }
+  .lenis.lenis-smooth { scroll-behavior: auto !important; }
+  body {
+    @apply bg-paper text-ink antialiased;
+    font-family: "Archivo Variable", system-ui, sans-serif;
+    font-stretch: 100%;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+  ::selection { background: #F5B82E; color: #132034; }
+  :focus-visible { outline: 3px solid #F5B82E; outline-offset: 3px; border-radius: 4px; }
+  img { max-width: 100%; display: block; }
+}
+
+@layer components {
+  /* Expanded, heavy display type: reads like jobsite signage */
+  .display { font-stretch: 125%; font-weight: 800; letter-spacing: -0.02em; line-height: 0.95; }
+  .wide { font-stretch: 118%; }
+  .container-x { @apply mx-auto w-full max-w-[1240px] px-4 sm:px-6 lg:px-10; }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-[15px] font-semibold transition-colors duration-200;
+    font-stretch: 112%;
+  }
+  .btn-primary { @apply btn bg-hardhat text-ink hover:bg-[#FFC94D]; }
+  .btn-ghost-dark { @apply btn border border-white/30 text-white hover:border-white hover:bg-white/10; }
+  .btn-ghost-light { @apply btn border border-ink/20 text-ink hover:border-ink; }
+  .field {
+    @apply w-full rounded-xl border border-white/15 bg-white/[0.06] px-4 py-3 text-white placeholder:text-white/40 transition-colors;
+    @apply focus:border-hardhat focus:outline-none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
