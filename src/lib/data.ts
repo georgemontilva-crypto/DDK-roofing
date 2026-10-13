@@ -52,6 +52,6 @@ export const PROJECTS = [
   { img: "/images/framing.webp", title: "Roof framing and decking", tag: "Structure" },
   { img: "/images/drill-tile.webp", title: "Tile repair and fastening", tag: "Repair" },
   { img: "/images/trusses.webp", title: "New truss system", tag: "Structure" },
-  { img: "/images/crew-sunset.webp", title: "Crew on a new build", tag: "Installation" },
+  { img: "/images/shingle.webp", title: "Shingle roof installation", tag: "Installation" },
   { img: "/images/batten.webp", title: "Battens and underlayment", tag: "Replacement" },
 ];
