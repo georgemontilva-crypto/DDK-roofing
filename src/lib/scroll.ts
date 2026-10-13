@@ -18,10 +18,21 @@ export function initSmoothScroll() {
   };
 }
 
-export function scrollToHash(hash: string) {
+export function scrollToHash(hash: string, immediate = false) {
   const el = document.querySelector(hash);
   if (!el) return;
-  if (lenis) lenis.scrollTo(el as HTMLElement, { offset: -72 });
+  if (lenis) {
+    lenis.resize(); // page height may have changed after a route change
+    lenis.scrollTo(el as HTMLElement, { offset: -72, immediate });
+  }
   else el.scrollIntoView({ behavior: "smooth", block: "start" });
-  history.replaceState(null, "", hash);
+  history.replaceState(null, "", "/" + hash);
+}
+
+export function scrollToTop() {
+  if (lenis) {
+    lenis.resize();
+    lenis.scrollTo(0, { immediate: true });
+  }
+  else window.scrollTo(0, 0);
 }

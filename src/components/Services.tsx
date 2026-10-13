@@ -52,7 +52,7 @@ export default function Services() {
                         <div className="pb-7">
                           <p className="max-w-[34rem] text-lg leading-relaxed text-ink/75">{s.text}</p>
                           <img src={s.img} alt="" loading="lazy" className="mt-5 aspect-[16/9] w-full rounded-2xl object-cover lg:hidden" />
-                          <a href="#estimate" className="mt-5 inline-block font-semibold text-ddk underline decoration-hardhat decoration-2 underline-offset-4 hover:text-ink">
+                          <a href="/#estimate" className="mt-5 inline-block font-semibold text-ddk underline decoration-hardhat decoration-2 underline-offset-4 hover:text-ink">
                             Ask about {s.title.toLowerCase()}
                           </a>
                         </div>

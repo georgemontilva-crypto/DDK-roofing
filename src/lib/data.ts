@@ -4,10 +4,11 @@ export const EMAIL = "info@ddkroofing.com";
 export const HOURS = "Monday to Friday, 9:00 AM – 5:00 PM";
 
 export const NAV = [
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#projects", label: "Projects" },
-  { href: "#area", label: "Service area" },
+  { href: "/#about", label: "About" },
+  { href: "/#services", label: "Services" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/#blog", label: "Blog" },
+  { href: "/#area", label: "Service area" },
 ];
 
 export const SERVICES = [

@@ -17,7 +17,7 @@ export default function Area() {
               <dd className="text-lg leading-snug">{HOURS}</dd>
             </div>
           </dl>
-          <a href="#estimate" className="btn-ghost-light mt-10">Check if we cover your area</a>
+          <a href="/#estimate" className="btn-ghost-light mt-10">Check if we cover your area</a>
         </div>
         <div className="overflow-hidden rounded-[28px] bg-sky lg:col-span-7">
           <img

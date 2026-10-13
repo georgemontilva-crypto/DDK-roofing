@@ -12,7 +12,7 @@ export default function Footer() {
           <p className="wide font-bold text-white">Explore</p>
           <ul className="mt-4 space-y-2">
             {NAV.map((n) => <li key={n.href}><a href={n.href} className="hover:text-white">{n.label}</a></li>)}
-            <li><a href="#estimate" className="hover:text-white">Free estimate</a></li>
+            <li><a href="/#estimate" className="hover:text-white">Free estimate</a></li>
           </ul>
         </nav>
         <div>

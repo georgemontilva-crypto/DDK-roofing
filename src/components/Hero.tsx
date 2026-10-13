@@ -45,7 +45,7 @@ export default function Hero() {
               on the job. Licensed, insured, and quick to respond when a storm hits.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <a href="#estimate" className="btn-primary">Get a free estimate</a>
+              <a href="/#estimate" className="btn-primary">Get a free estimate</a>
               <a href={PHONE_HREF} className="btn-ghost-dark"><PhoneIcon /> {PHONE_DISPLAY}</a>
             </div>
           </motion.div>

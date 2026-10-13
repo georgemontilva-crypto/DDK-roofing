@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { NAV, PHONE_DISPLAY, PHONE_HREF } from "../lib/data";
 import { PhoneIcon } from "./Icons";
 
-export default function Header() {
+export default function Header({ solidAlways = false }: { solidAlways?: boolean }) {
   const [solid, setSolid] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -18,7 +18,7 @@ export default function Header() {
     document.body.style.overflow = open ? "hidden" : "";
   }, [open]);
 
-  const light = solid && !open;
+  const light = (solid || solidAlways) && !open;
 
   return (
     <header
@@ -27,7 +27,7 @@ export default function Header() {
       }`}
     >
       <div className="container-x flex h-[72px] items-center justify-between gap-6">
-        <a href="#top" aria-label="DDK Roofing, back to top" className="shrink-0">
+        <a href="/#top" aria-label="DDK Roofing, back to top" className="shrink-0">
           <img src={light ? "/images/logo.png" : "/images/logo-white.png"} alt="DDK Roofing LLC" width={157} height={40} className="h-9 w-auto sm:h-10" />
         </a>
 
@@ -43,7 +43,7 @@ export default function Header() {
           <a href={PHONE_HREF} className={`hidden items-center gap-2 text-[15px] font-semibold md:inline-flex ${light ? "text-ink" : "text-white"}`}>
             <PhoneIcon /> {PHONE_DISPLAY}
           </a>
-          <a href="#estimate" className="btn-primary hidden !py-2.5 sm:inline-flex">
+          <a href="/#estimate" className="btn-primary hidden !py-2.5 sm:inline-flex">
             Free estimate
           </a>
           <button
@@ -88,7 +88,7 @@ export default function Header() {
               ))}
             </nav>
             <div className="mt-auto flex flex-col gap-3">
-              <a href="#estimate" onClick={() => setOpen(false)} className="btn-primary">Get a free estimate</a>
+              <a href="/#estimate" onClick={() => setOpen(false)} className="btn-primary">Get a free estimate</a>
               <a href={PHONE_HREF} className="btn-ghost-dark"><PhoneIcon /> Call {PHONE_DISPLAY}</a>
             </div>
           </motion.div>
