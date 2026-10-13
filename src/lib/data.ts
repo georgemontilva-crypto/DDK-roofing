@@ -1,8 +1,6 @@
 export const PHONE_DISPLAY = "(352) 534-4343";
 export const PHONE_HREF = "tel:+13525344343";
 export const EMAIL = "info@ddkroofing.com";
-export const ADDRESS_1 = "1936 Bruce B Downs Blvd #330";
-export const ADDRESS_2 = "Wesley Chapel, FL 33543";
 export const HOURS = "Monday to Friday, 9:00 AM – 5:00 PM";
 
 export const NAV = [

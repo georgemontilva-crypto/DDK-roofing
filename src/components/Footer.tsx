@@ -1,4 +1,4 @@
-import { ADDRESS_1, ADDRESS_2, EMAIL, NAV, PHONE_DISPLAY, PHONE_HREF } from "../lib/data";
+import { EMAIL, NAV, PHONE_DISPLAY, PHONE_HREF } from "../lib/data";
 
 export default function Footer() {
   return (
@@ -20,7 +20,6 @@ export default function Footer() {
           <ul className="mt-4 space-y-2">
             <li><a href={PHONE_HREF} className="hover:text-white">{PHONE_DISPLAY}</a></li>
             <li><a href={`mailto:${EMAIL}`} className="hover:text-white">{EMAIL}</a></li>
-            <li>{ADDRESS_1}<br />{ADDRESS_2}</li>
           </ul>
         </div>
         <div>
